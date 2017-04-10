@@ -198,6 +198,6 @@ $("#browserInfo").html(
     'Mobile: ' + jscd.mobile + '<br>' +
     'Flash: ' + jscd.flashVersion + '<br>' +
     'Cookies: ' + jscd.cookies + '<br>' +
-    'Screen Size: ' + jscd.screen + '<br><br>' +
-    'Full User Agent: ' + navigator.userAgent
+    'Screen Size: ' + jscd.screen + '<br>'
+    // + 'Full User Agent: ' + navigator.userAgent
 );
