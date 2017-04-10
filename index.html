@@ -19,7 +19,12 @@
 
       <!-- <button class="button inheritFont">Blank button</button> -->
       <div class="response" id="response">
+        <div class="" id="browserInfo">
 
+        </div>
+        <div class="" id="locationInfo">
+
+        </div>
       </div>
     </div>
     <div class= "portfolioLinks" id="portfolioLinks">
@@ -29,11 +34,25 @@
     </div>
 
     <script type="text/javascript">
-
+    function browserDetection() {
+        if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+            return "Browser: Firefox " + new Number(RegExp.$1).toFixed(1);
+        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+            return "Browser: IE " + new Number(RegExp.$1).toFixed(1);
+        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+            return "Browser: Chrome " + (new Number(RegExp.$1).toFixed(1));
+            // capture x.x portion and store as a number
+        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+            return "Browser: Opera " + new Number(RegExp.$1).toFixed(1);
+        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+            return "Browser: Safari " + new Number(RegExp.$1).toFixed(1);
+        }
+    }
+      $("#browserInfo").html(browserDetection());
     </script>
 
     <!-- Google Analytics -->
-    <script>
+    <!-- <script>
       (function(i,s,o,g,r,a,m){
         i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
@@ -46,7 +65,7 @@
 
       ga('create', 'UA-XXXXX-Y', 'auto');
       ga('send', 'pageview');
-    </script>
+    </script> -->
     <!-- End Google Analytics -->
   </body>
 </html>
