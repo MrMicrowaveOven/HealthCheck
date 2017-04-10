@@ -5,14 +5,14 @@ body {
   letter-spacing: .5px;
   margin: 60px auto;
   min-height: 500px;
-  width: 720px;
-  background-color: rgba(119, 136, 153, 0.75);;
+  width: 1000px;
+  background-color: rgba(119, 136, 153, 0.95);;
   padding: 30px;
 }
 
 html {
-  background-image: url("../background.png");
-  background-size: 1700px
+  background-image: url("../background.jpg");
+  background-size: 1800px
 }
 
 #portfolioLinks {
@@ -57,7 +57,7 @@ html {
 }
 
 .response {
-  width: 430px;
+  width: 1000px;
   text-align: center;
 }
 
@@ -73,11 +73,6 @@ html {
   align-items: center;
 }
 
-.description {
-  padding: 123px 70px 0px 70px;
-  text-align: center;
-}
-
 .hide {
   display: none;
 }
@@ -88,4 +83,9 @@ html {
 
 .inlineText {
   display: inline-block;
+}
+
+.description {
+  padding: 40px 70px 0px 70px;
+  text-align: center;
 }
