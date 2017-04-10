@@ -102,6 +102,8 @@
             cookieEnabled = (document.cookie.indexOf('testcookie') != -1) ? true : false;
         }
 
+        cookieEnabled = cookieEnabled ? "Enabled" : "Disabled";
+
         // system
         var os = unknown;
         var clientStrings = [
@@ -164,7 +166,7 @@
 
         // flash (you'll need to include swfobject)
         /* script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" */
-        var flashVersion = 'no check';
+        var flashVersion = 'Not installed';
         if (typeof swfobject != 'undefined') {
             var fv = swfobject.getFlashPlayerVersion();
             if (fv.major > 0) {
