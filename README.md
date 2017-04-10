@@ -1,3 +1,3 @@
-# AppSkeleton
+# HealthCheck
 
-This is a skeleton that I like to use to pump out quick and simple applications.  This way most of the formatting is already done.
+A quick checkup on your browser, operating system, flash version, and many other things.
