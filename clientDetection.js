@@ -192,7 +192,7 @@
 }(this));
 
 $("#browserInfo").html(
-    'OS: ' + jscd.os +' '+ jscd.osVersion + '<br>' +
+    'Operating System: ' + jscd.os +' '+ jscd.osVersion + '<br>' +
     'Browser: ' + jscd.browser +' '+ jscd.browserMajorVersion +
       ' (' + jscd.browserVersion + ')<br>' +
     'Mobile: ' + jscd.mobile + '<br>' +

@@ -3,15 +3,15 @@ var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5
 var downloadSize = 4995374; //bytes
 
 function ShowProgressMessage(msg) {
-    if (console) {
-        if (typeof msg == "string") {
-            console.log(msg);
-        } else {
-            for (var i = 0; i < msg.length; i++) {
-                console.log(msg[i]);
-            }
-        }
-    }
+    // if (console) {
+    //     if (typeof msg == "string") {
+    //         console.log(msg);
+    //     } else {
+    //         for (var i = 0; i < msg.length; i++) {
+    //             console.log(msg[i]);
+    //         }
+    //     }
+    // }
 
     var oProgress = document.getElementById("progress");
     if (oProgress) {
@@ -54,7 +54,7 @@ function MeasureConnectionSpeed() {
         var speedKbps = (speedBps / 1024).toFixed(2);
         var speedMbps = (speedKbps / 1024).toFixed(2);
         ShowProgressMessage(
-            "Internet Speed: " + 
+            "Internet Speed: " +
             // speedBps + " bps",
             // speedKbps + " kbps",
             speedMbps + " Mbps"
