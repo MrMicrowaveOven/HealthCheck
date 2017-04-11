@@ -23,7 +23,7 @@ function ShowProgressMessage(msg) {
 function InitiateSpeedDetection() {
     ShowProgressMessage("Calculating internet speed, please wait.");
     window.setTimeout(MeasureConnectionSpeed, 1);
-};
+}
 
 if (window.addEventListener) {
     window.addEventListener('load', InitiateSpeedDetection, false);
@@ -57,7 +57,7 @@ function MeasureConnectionSpeed() {
             "Internet Speed: " +
             // speedBps + " bps",
             // speedKbps + " kbps",
-            speedMbps + " Mbps"
+            speedMbps + " Mbps "  + "<img src='greenCheck.png' class='statusImage'></img>"
         );
     }
 }
