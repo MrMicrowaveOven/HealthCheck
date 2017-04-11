@@ -191,13 +191,71 @@
     };
 }(this));
 
-$("#browserInfo").html(
-    'Operating System: ' + jscd.os +' '+ jscd.osVersion + '<br>' +
-    'Browser: ' + jscd.browser +' '+ jscd.browserMajorVersion +
-      ' (' + jscd.browserVersion + ')<br>' +
-    'Mobile: ' + jscd.mobile + '<br>' +
-    'Flash: ' + jscd.flashVersion + '<br>' +
-    'Cookies: ' + jscd.cookies + '<br>' +
-    'Screen Size: ' + jscd.screen + '<br>'
-    // + 'Full User Agent: ' + navigator.userAgent
-);
+var statsObject = {
+  operatingSystemStats: {
+    label: "Operating System: ",
+    id: "operatingSystemStats",
+    statusImage: "greenCheck.png",
+    displayValue: jscd.os +' '+ jscd.osVersion,
+  },
+  browserStats: {
+    label: "Browser: ",
+    id: "browserStats",
+    statusImage: "greenCheck.png",
+    displayValue: jscd.browser +' '+ jscd.browserMajorVersion +
+      ' (' + jscd.browserVersion + ')',
+  },
+  mobileStats: {
+    label: "Mobile: ",
+    id: "mobileStats",
+    statusImage: "greenCheck.png",
+    displayValue: jscd.mobile,
+  },
+  flashStats: {
+    label: "Flash: ",
+    id: "flashStats",
+    statusImage: "greenCheck.png",
+    displayValue: jscd.flashVersion,
+  },
+  cookiesStats: {
+    label: "Cookies: ",
+    id: "cookiesStats",
+    statusImage: "greenCheck.png",
+    displayValue: jscd.cookies,
+  },
+  screenSizeStats: {
+    label: "Screen Size: ",
+    id: "screenSizeStats",
+    statusImage: "greenCheck.png",
+    displayValue: jscd.screen,
+  }
+};
+
+var statsDivs = $("#browserInfo");
+
+Object.keys(statsObject).forEach(function(statsKey) {
+  var statusDiv = $("<div></div>");
+  statusDiv.attr("id", statsObject[statsKey].id);
+  statusDiv.attr("class", "inlineText");
+  statusDiv.html(statsObject[statsKey].label + statsObject[statsKey].displayValue);
+
+  var statusImage = $("<img></img>");
+  statusImage.attr("id", statsObject[statsKey].id);
+  statusImage.attr("class", "statusImage");
+  statusImage.attr("src", statsObject[statsKey].statusImage);
+
+  statsDivs.append(statusDiv, " ", statusImage, "<br>");
+});
+
+
+
+// $("#browserInfo").html(
+//     'Operating System: ' + jscd.os +' '+ jscd.osVersion + '<br>' +
+//     'Browser: ' + jscd.browser +' '+ jscd.browserMajorVersion +
+//       ' (' + jscd.browserVersion + ')<br>' +
+//     'Mobile: ' + jscd.mobile + '<br>' +
+//     'Flash: ' + jscd.flashVersion + '<br>' +
+//     'Cookies: ' + jscd.cookies + '<br>' +
+//     'Screen Size: ' + jscd.screen + '<br>'
+//     // + 'Full User Agent: ' + navigator.userAgent
+// );
