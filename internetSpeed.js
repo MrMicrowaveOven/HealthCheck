@@ -3,16 +3,6 @@ var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5
 var downloadSize = 4995374; //bytes
 
 function ShowProgressMessage(msg) {
-    // if (console) {
-    //     if (typeof msg == "string") {
-    //         console.log(msg);
-    //     } else {
-    //         for (var i = 0; i < msg.length; i++) {
-    //             console.log(msg[i]);
-    //         }
-    //     }
-    // }
-
     var oProgress = document.getElementById("progress");
     if (oProgress) {
         var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");

@@ -1,4 +1,4 @@
-body {
+/*body {
   position: relative;
   font-size: x-large;
   font-family: 'Slabo 27px', serif;
@@ -8,14 +8,14 @@ body {
   width: 450px;
   background-color: rgba(119, 136, 153, 0.95);;
   padding: 30px;
-}
+}*/
 
 .statusImage {
   width: 25px;
   display: inline-block;
 }
 
-html {
+/*html {
   background-image: url("../background.jpg");
   background-size: 1800px
 }
@@ -93,4 +93,4 @@ html {
 .description {
   padding: 40px 70px 0px 70px;
   text-align: center;
-}
+}*/
